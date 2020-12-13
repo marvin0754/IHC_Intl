@@ -1,19 +1,20 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameapp/class/avatars.dart';
 import 'package:gameapp/class/game.dart';
 import 'package:gameapp/class/review.dart';
 import 'package:gameapp/pages/reviewpage.dart';
-import 'package:gameapp/widgets/gamecard.dart';
 import 'package:gameapp/widgets/gamepageappbar.dart';
 import 'package:gameapp/widgets/guestprofile.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 import '../class/game.dart';
 import '../widgets/favoriteicon.dart';
 import '../widgets/gamepageheader.dart';
 import 'package:gameapp/generated/l10n.dart';
+
+import 'chart.dart';
 
 class GamePage extends StatefulWidget {
   GamePage({Key key,this.gameId}) : super(key: key);

@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:gameapp/class/game.dart';
 import 'package:gameapp/class/news.dart';
 import 'package:gameapp/class/user.dart';
+import 'package:gameapp/pages/chart.dart';
 import 'package:gameapp/pages/gamepage.dart';
 import 'package:gameapp/pages/newspage.dart';
 import 'package:gameapp/services/storage.dart';
@@ -17,7 +19,6 @@ import '../widgets/gamecard.dart';
 import 'login.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:url_launcher/url_launcher.dart';
-// import 'game.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:gameapp/generated/l10n.dart';
@@ -50,6 +51,7 @@ class Home extends StatelessWidget {
                 ),
             "/register": (context) =>
                 RegisterMain(redirectToName: initialRoute),
+            "/chart": (context) => ChartP(),
           },
           theme: ThemeData(
               // This is the theme of your application.
@@ -115,7 +117,7 @@ class _HomeMainState extends State<HomeMain> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                /*  Text(
                     S().buscador,
                     style: GoogleFonts.montserrat(
                         textStyle: TextStyle(
@@ -123,6 +125,17 @@ class _HomeMainState extends State<HomeMain> {
                             fontWeight: FontWeight.w700,
                             color:
                                 Theme.of(context).textTheme.headline1.color)),
+                  ),*/
+                  IconButton(
+                    icon: Icon(FontAwesomeIcons.chartLine), color: Colors.white, iconSize: 45.0, onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          //ChartP(title: 'Sales Dashboard 2018')),
+                          ChartP(title: "Estadisticas")),
+                      );
+                  },
                   ),
                   Row(children: [
                     RawMaterialButton(
@@ -136,7 +149,7 @@ class _HomeMainState extends State<HomeMain> {
                           }
                         });
                       },
-                      child: Icon(
+                      child: Icon( 
                         Icons.search,
                         size: 30,
                         color: Colors.white,

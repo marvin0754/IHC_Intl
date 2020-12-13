@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gameapp/generated/l10n.dart';
+import 'package:gameapp/pages/chart.dart';
 import 'gamepage.dart';
 import 'home.dart';
 import 'profile.dart';
@@ -39,7 +40,7 @@ class _DashboardState extends State<Dashboard> {
       Home(),
       // GamePage(game:game.Games[0]),
       Profile(),
-      Settings()
+      Settings(),
     ];
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,

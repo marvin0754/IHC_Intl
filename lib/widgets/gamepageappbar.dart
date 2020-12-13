@@ -22,7 +22,8 @@ class GamePageAppBar extends SliverPersistentHeaderDelegate {
             child: Container(
               // height: 50,
               color: Colors.black,
-            )),
+            )
+        ),
         appBar,
       ],
     );
